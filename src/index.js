@@ -2,12 +2,22 @@
 
 document.addEventListener("DOMContentLoaded", (evt) => {
   evt.preventDefault()
-  create-task-form.addEventListener("Submit", (evt) => {
+  let theForm = document.querySelector("#create-task-form")
+  
+  theForm.addEventListener("Submit", (evt) => {
     evt.preventDefault()
     
-    let form = evt.target 
+    let theForm = evt.target 
     let input = form.item 
     let userTypes = input.value
+
+    function addItem (){
+      let blankli = document.createElement("Li")
+      blankli.className = "description"
+      blankli.innerText = "item"
+      let itemUl = document.querySelector("ul#blobs")
+      itemUl.append(blanckli)
+    }
 
     
   });
